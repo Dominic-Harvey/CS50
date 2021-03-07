@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <table class="center" border=1 frame=void rules=rows>
+        <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                    <th>Shares</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+        </thead>
+        <tbody>
+            {% for row in portfolio %}
+                <tr class="symbol">
+                    <td>{{ row["symbol"] }}</td>
+                    <td>{{ row["name"] }}</td>
+                    <td>{{ row["shares"] }}</td>
+                    <td>{{ row["price"] }}</td>
+                    <td>{{ row["total"] }}</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td>Cash</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{ cash }}</td>
+            </tr>
+            <tr>
+                <td><b>Equity</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b>{{ total }}</b></td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

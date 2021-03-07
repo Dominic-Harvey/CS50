@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <input type="search" list="symbol_predictions" placeholder="Symbol" name="symbol" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Quote</button>
+    </form>
+
+    <datalist id="symbol_predictions">
+        {% for symbol in symbol_list %}
+            <option value="{{ symbol }}">
+        {% endfor%}
+    </datalist>
+{% endblock %}
