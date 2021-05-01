@@ -4,7 +4,7 @@ Problems Sets From CS50 2020
 Pset 1 - 5 are in C
 Includes problem sets include encryption, file pointers for editing images, creating a Hash table for a dictonary and more.
 
-Pset 6 is in Python, both resolving old problems in a new language and using the power of Python to sequence DNA
+Pset 6 is in Python, both refactoring old problems from C into Python and using the power of Python to sequence DNA
 
 Pset 7 involves using SQL to intialy create relational queries of a movie database, as well as creating and populating a custom SQLite DB
 
